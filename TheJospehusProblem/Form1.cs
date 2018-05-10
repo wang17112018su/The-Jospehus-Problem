@@ -21,10 +21,9 @@ namespace TheJospehusProblem
             label1.Text = "";
             Warriors = new List<int>();
             label1.Visible = true;
-            textBox2.Visible = true;
             button1.Visible = false;
             textBox1.Visible = false;
-            label2.Visible = false;
+            label2.Text = "" ;
             this.WindowState = FormWindowState.Maximized;
             this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
@@ -42,13 +41,13 @@ namespace TheJospehusProblem
                 //Total count is even all even item will be remove
                 if (Warriors.Count() % 2 == 0)
                 {
-                    textBox2.Text += Story(Warriors);
+                    label2.Text += Story(Warriors);
                     Battle(Warriors);
                 }
                 //Total count is odd all even item and 1st item will be remove
                 else
                 {
-                    textBox2.Text += Story(Warriors);
+                    label2.Text += Story(Warriors);
                     Battle(Warriors);
                     Warriors.Remove(Warriors[0]);
                 }
